@@ -1,0 +1,1 @@
+{"virtualbox":{"/mnt":{"create":true,"guestpath":"/mnt","hostpath":"C:/Users/Alumno/Desktop/CURSO/ASO/aso_vgs/UT01/PR01/compartida","disabled":false,"__vagrantfile":true},"/vagrant":{"guestpath":"/vagrant","hostpath":"C:/Users/Alumno/Desktop/CURSO/ASO/aso_vgs/UT01/PR01","disabled":false,"__vagrantfile":true}}}
