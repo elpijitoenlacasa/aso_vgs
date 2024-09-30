@@ -1,0 +1,12 @@
+Vagrant.configure("2") do |config|
+  config.vm.box = "generic/ubuntu2204"
+  config.vm.hostname = "web-vgs"
+  config.vm.synced_folder "./compartido", "/home/vagrant/compartido", create: true
+  config.vm.network "private_network", ip:"172.16.0.0"
+  config.vm.network "public_network", ip:"192.168.100.1"
+  config.vm.provider "virtualbox" do |vb|
+    vb.name = "Web Server"
+    vb.memory = 3000
+    vb.cpus = 2
+  end
+end
