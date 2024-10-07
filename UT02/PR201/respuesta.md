@@ -79,3 +79,12 @@
 
 ### Sucede que cualquiera puede modificarte los ficheros si no le cambias los permisos previamente.
 
+# Apartado 4
+
+### Sticky Bit
+
+1.- ![paso 1](./captura8.png)
+2.- ![paso 1](./captura9.png)
+3.- ![paso 1](./captura10.png)
+4.- ![paso 1](./captura11.png)
+
