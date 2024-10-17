@@ -1,0 +1,10 @@
+Vagrant.configure("2") do |config|
+  config.vm.box = "generic/ubuntu2204"
+  config.vm.hostname = "ubuntu22"
+  config.vm.network "public_network", ip:"172.16.0.1"
+  config.vm.provider "virtualbox" do |vb|
+   vb.name ="SSH-grupo"
+   vb.memory = 2000
+   vb.cpus = 2
+  end
+ end
