@@ -66,3 +66,61 @@ fi
 ```
 # Ejercicio 6: Verificar si el usuario es root
 ### Haz un script que verifique si el script está siendo ejecutado por el usuario root, mostrando un mensaje diferente si no lo es.
+```bash
+USER_NAME=$(whoami)
+
+if [ "$USER_NAME" != "root" ]; then
+    echo "Este script debe ser ejecutado como usuario root."
+else
+    echo "El script se está ejecutando como usuario root."
+fi
+```
+
+### Realiza un script que pida una nota numérica y determine si es “Aprobado” (5 o más) o “Suspenso” (menos de 5).
+
+```bash
+read -p "Dame un numero " num
+contra=1234
+if [ $num -ge 5 ]
+then
+        echo "Aprobado"
+else
+        echo "Suspenso"
+fi
+```
+### Crea un script que compruebe el espacio libre en disco. Si el espacio es inferior al 10%, muestra un mensaje de advertencia.
+```bash
+libre=$(df)
+if [ $libre -lt 10% ]
+then
+        echo "Es inferior al 10 %"
+else
+        echo "No es inferior"
+fi
+```
+### Haz un script que solicite al usuario su edad y determine si es menor, adulto o mayor de edad, según un umbral predefinido (por ejemplo, menor de 18, entre 18 y 65, y mayor de 65).
+```bash
+read -p "Dime tu edad: " num
+if [ $num -lt 18 ]
+then
+        echo "Es menor de edad"
+fi
+if [ $num -gt 18 ] && [ $num -lt 65 ]
+then
+        echo "Mediana edad"
+fi
+if [ $num -gt 65 ] 
+then
+        echo "Muy mayor"
+fi
+```
+### Escribe un script que solicite el nombre de un archivo y luego imprima cuántas líneas tiene ese archivo. Verifica que el archivo exista antes de contar las líneas.
+```bash
+contador=$(wc -l)
+read -p "Nombre de archivo " nombre
+if [ -e $nombre ]
+then
+        $contador
+        echo "El archivo $nombre tiene $contador"
+fi
+```
