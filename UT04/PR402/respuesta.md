@@ -2,13 +2,23 @@
 
 ### 1.- Visualiza las últimas cinco entradas del historial, mostrando para cada una el comando, la hora en que finalizó su ejecución y el estado de ejecución.
 
+```` Get-History | Select-Object -Last 5 | Format-Table CommandLine, EndExecutionTime, Status ````
+
 ### 2.- Ejecuta el comando Get-Command (que muestra todos los comandos disponibles en Powershell) e interrúmpelo antes de que finalice su ejecución pulsando las teclas Ctrl-C. A continuación, ejecútalo dejando que finalice correctamente.
+
+![](captura1.png)
 
 ### 3.- Vuelve a ejecutar el comando del punto 1 y comprueba las diferentes salidas de finalización de estado de ejecución.
 
+```Get-History | Select-Object -Last 5 | Format-Table CommandLine, EndExecutionTime, Status```
+
 ### 4.- Muestra todos los procesos con el nombre msedge mostrando para cada uno el identificador, el consumo de CPU y los hilos (threads)
 
+```Get-Process msedge | Select-Object Id, CPU, Threads```
+
 ### 5.- Averigua para qué sirve el parámetro -Delimiter del comando Export-CSV
+
+
 
 ### 6.- Muestra en una ventana la ayuda del comando Get-History
 
